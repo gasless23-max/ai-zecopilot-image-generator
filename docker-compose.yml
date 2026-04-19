@@ -1,0 +1,13 @@
+# Docker Compose configuration for the project
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: example
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: example_db
